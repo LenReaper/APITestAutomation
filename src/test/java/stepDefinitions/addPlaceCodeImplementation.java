@@ -2,6 +2,8 @@ package stepDefinitions;
 
 import static io.restassured.RestAssured.given;
 
+import java.util.ResourceBundle;
+
 import org.junit.Assert;
 
 import api.POJOPost;
@@ -21,6 +23,7 @@ public class addPlaceCodeImplementation extends POJOPost{
 	RequestSpecification partialRequest;
 	RequestSpecification request;
 	String finalResponse;
+	ResourceBundle res = ResourceBundle.getBundle("OR");
 	
 	@Given("User is logged into the api")
 	public void user_is_logged_into_the_api() {
@@ -28,8 +31,8 @@ public class addPlaceCodeImplementation extends POJOPost{
 		//ResqSpecBuilder to use common code
 		
 		partialRequest = new RequestSpecBuilder()
-											.setBaseUri("https://rahulshettyacademy.com")
-											.addQueryParam("key", "qaclick123")
+											.setBaseUri(res.getString("url"))
+											.addQueryParam("key", res.getString("keyName"))
 											.setContentType(ContentType.JSON).build();
 	}
 
@@ -48,7 +51,7 @@ public class addPlaceCodeImplementation extends POJOPost{
 				.expectStatusCode(200)
 				.expectContentType(ContentType.JSON).log(LogDetail.ALL).build();
 
-		finalResponse = request.when().post("/maps/api/place/add/json")
+		finalResponse = request.when().post(res.getString("postResource"))
 		.then().spec(response).extract().asString();	
 	    
 	}
