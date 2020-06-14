@@ -7,7 +7,7 @@ public class addPlaceObjects {
 	
 	private Locations location;
 	private int accuracy;
-	private String name;
+	static private String name;
 	private String phone_number;
 	private String address;
 	private List<String> types;
@@ -31,7 +31,7 @@ public class addPlaceObjects {
 		return name;
 	}
 	public void setName(String name) {
-		this.name = name;
+		addPlaceObjects.name = name;
 	}
 	public String getPhone_number() {
 		return phone_number;

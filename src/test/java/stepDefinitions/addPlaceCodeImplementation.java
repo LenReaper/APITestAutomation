@@ -2,19 +2,16 @@ package stepDefinitions;
 
 import static io.restassured.RestAssured.given;
 
+import java.io.FileNotFoundException;
 import java.util.ResourceBundle;
 
 import org.junit.Assert;
 
 import api.POJOPost;
+import api.Utils;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.builder.ResponseSpecBuilder;
-import io.restassured.filter.log.LogDetail;
-import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
@@ -23,34 +20,27 @@ public class addPlaceCodeImplementation extends POJOPost{
 	RequestSpecification partialRequest;
 	RequestSpecification request;
 	String finalResponse;
+	static String placeId;
+	Utils util = new Utils();
 	ResourceBundle res = ResourceBundle.getBundle("OR");
 	
 	@Given("User is logged into the api")
-	public void user_is_logged_into_the_api() {
+	public void user_is_logged_into_the_api() throws FileNotFoundException {
 	    
-		//ResqSpecBuilder to use common code
-		
-		partialRequest = new RequestSpecBuilder()
-											.setBaseUri(res.getString("url"))
-											.addQueryParam("key", res.getString("keyName"))
-											.setContentType(ContentType.JSON).build();
+		partialRequest = util.requestSpec();
 	}
 
 	@When("User enters values in required fields to add a place")
 	public void user_enters_values_in_required_fields_to_add_a_place() {
 	    
-		//Final request 
-		
 		request = given().spec(partialRequest).body(postObject());
 	    
 	}
 
 	@Then("The location should be successfully added")
 	public void the_location_should_be_successfully_added() {
-		ResponseSpecification response =  new ResponseSpecBuilder()
-				.expectStatusCode(200)
-				.expectContentType(ContentType.JSON).log(LogDetail.ALL).build();
-
+		
+		ResponseSpecification response =  util.responseSpec();
 		finalResponse = request.when().post(res.getString("postResource"))
 		.then().spec(response).extract().asString();	
 	    
@@ -59,13 +49,9 @@ public class addPlaceCodeImplementation extends POJOPost{
 	@Then("The {string} code should be {string}")
 	public void the_code_should_be(String keyValue, String expValue) {
 		
-		JsonPath js = new JsonPath(finalResponse);
-		String actualStatus = js.getString(keyValue);
+		placeId = util.parseJsonToString(finalResponse, "place_id");
+		String actualStatus = util.parseJsonToString(finalResponse, keyValue);
 		Assert.assertEquals(expValue, actualStatus);
-		
-		
-	    
-	    
 	}
 
 }
