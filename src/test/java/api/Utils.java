@@ -1,5 +1,7 @@
 package api;
 
+import static io.restassured.RestAssured.given;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
@@ -51,6 +53,17 @@ public class Utils {
 		JsonPath js = new JsonPath(response);
 		return js.getString(variable);
 		
+	}
+	
+	public String getPlaceResponse(String placeId) throws FileNotFoundException {
+		
+		ResourceBundle res = ResourceBundle.getBundle("OR");
+		
+		String getResponse = given().spec(requestSpec()).queryParam("place_id", placeId)
+				.when().get(res.getString("getResource"))
+				.then().spec(responseSpec()).extract().asString();
+		
+		return getResponse;
 	}
 
 }

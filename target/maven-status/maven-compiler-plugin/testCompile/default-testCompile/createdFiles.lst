@@ -1,5 +1,4 @@
 api\Utils.class
 cucumber\Options\testRunner.class
 stepDefinitions\addPlaceCodeImplementation.class
-stepDefinitions\getPlaceCodeImplementation.class
 api\POJOPost.class
