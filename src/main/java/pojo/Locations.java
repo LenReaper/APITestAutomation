@@ -1,4 +1,4 @@
-package pojoSerialization;
+package pojo;
 
 public class Locations {
 	

@@ -20,7 +20,8 @@ public class addPlaceCodeImplementation extends POJOPost{
 	RequestSpecification partialRequest;
 	RequestSpecification request;
 	String finalResponse;
-	static String placeId;
+	public static String placeId;
+	String name;
 	Utils util = new Utils();
 	ResourceBundle res = ResourceBundle.getBundle("OR");
 	
@@ -30,10 +31,10 @@ public class addPlaceCodeImplementation extends POJOPost{
 		partialRequest = util.requestSpec();
 	}
 
-	@When("User enters values in required fields to add a place")
-	public void user_enters_values_in_required_fields_to_add_a_place() {
+	@When("User enters values in required fields to add a place using {string} {string} {string}")
+	public void user_enters_values_in_required_fields_to_add_a_place_using(String name, String address, String phNumber) {
 	    
-		request = given().spec(partialRequest).body(postObject());
+		request = given().spec(partialRequest).body(postObject(name, address, phNumber));
 	    
 	}
 
@@ -52,6 +53,19 @@ public class addPlaceCodeImplementation extends POJOPost{
 		placeId = util.parseJsonToString(finalResponse, "place_id");
 		String actualStatus = util.parseJsonToString(finalResponse, keyValue);
 		Assert.assertEquals(expValue, actualStatus);
+	}
+	
+	@Then("The name returned after get api is run must me same as {string}")
+	public void the_name_returned_after_get_api_is_run_must_me_same_as(String expectedName) throws FileNotFoundException {
+		
+		String response = given().spec(util.requestSpec()).queryParam("place_id", placeId)
+				.when().get(res.getString("getResource"))
+				.then().spec(util.responseSpec()).extract().asString();
+		String actualName = util.parseJsonToString(response, "name");
+		Assert.assertEquals(expectedName, actualName);
+		System.out.println("Expected Name "+expectedName+"    Actual Name "+actualName);
+	    
+	    
 	}
 
 }

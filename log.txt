@@ -1,9 +1,56 @@
-Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=83a1fc1c78d4d7b50e94ae98a63ac215
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
 Proxy:			<none>
 Request params:	<none>
 Query params:	key=qaclick123
-				place_id=83a1fc1c78d4d7b50e94ae98a63ac215
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": -366.66,
+        "lng": -500.2
+    },
+    "accuracy": 100,
+    "phone_number": "(0123)-456-789",
+    "address": "Sipur",
+    "types": [
+        "shoe rack",
+        "chappal"
+    ],
+    "website": "www.google.com/",
+    "language": "123654789",
+    "name": "Nebar"
+}
+HTTP/1.1 200 OK
+Date: Mon, 15 Jun 2020 11:33:17 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "7eefc160dae70802e221e96634246759",
+    "scope": "APP",
+    "reference": "bb76408d4c8245dc863c2edef4a9ca9ebb76408d4c8245dc863c2edef4a9ca9e",
+    "id": "bb76408d4c8245dc863c2edef4a9ca9e"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=7eefc160dae70802e221e96634246759
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=7eefc160dae70802e221e96634246759
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -12,13 +59,13 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Mon, 15 Jun 2020 06:13:31 GMT
+Date: Mon, 15 Jun 2020 11:33:19 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
 Access-Control-Max-Age: 3600
 Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
-Content-Length: 273
+Content-Length: 218
 Keep-Alive: timeout=5, max=100
 Connection: Keep-Alive
 Content-Type: application/json;charset=UTF-8
@@ -29,10 +76,256 @@ Content-Type: application/json;charset=UTF-8
         "longitude": "-500.2"
     },
     "accuracy": "100",
-    "name": "Third Nameless dudine",
+    "name": "Nebar",
     "phone_number": "(0123)-456-789",
-    "address": "Shaitan gali, Khatra mehal, Shamshan ke saamne",
+    "address": "Sipur",
     "types": "shoe rack,chappal",
     "website": "www.google.com/",
-    "language": "Spanish"
+    "language": "123654789"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": -366.66,
+        "lng": -500.2
+    },
+    "accuracy": 100,
+    "phone_number": "(0123)-456-789",
+    "address": "L Ngr",
+    "types": [
+        "shoe rack",
+        "chappal"
+    ],
+    "website": "www.google.com/",
+    "language": "789654123",
+    "name": "Star"
+}
+HTTP/1.1 200 OK
+Date: Mon, 15 Jun 2020 11:33:20 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "b17d0c8e74ba12a21627c9fb15b4296f",
+    "scope": "APP",
+    "reference": "bb6b2e95dd42274513ebdc445f639507bb6b2e95dd42274513ebdc445f639507",
+    "id": "bb6b2e95dd42274513ebdc445f639507"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=b17d0c8e74ba12a21627c9fb15b4296f
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=b17d0c8e74ba12a21627c9fb15b4296f
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Mon, 15 Jun 2020 11:33:22 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 217
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-366.66",
+        "longitude": "-500.2"
+    },
+    "accuracy": "100",
+    "name": "Star",
+    "phone_number": "(0123)-456-789",
+    "address": "L Ngr",
+    "types": "shoe rack,chappal",
+    "website": "www.google.com/",
+    "language": "789654123"
+}
+Request method:	POST
+Request URI:	https://rahulshettyacademy.com/maps/api/place/add/json?key=qaclick123
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "location": {
+        "lat": -366.66,
+        "lng": -500.2
+    },
+    "accuracy": 100,
+    "phone_number": "(0123)-456-789",
+    "address": "Gbasti",
+    "types": [
+        "shoe rack",
+        "chappal"
+    ],
+    "website": "www.google.com/",
+    "language": "987546321",
+    "name": "B da"
+}
+HTTP/1.1 200 OK
+Date: Mon, 15 Jun 2020 11:33:23 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 194
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": "OK",
+    "place_id": "c689666ba035599d0497a992f28628be",
+    "scope": "APP",
+    "reference": "3c8494751af570a86bd2ca24063727953c8494751af570a86bd2ca2406372795",
+    "id": "3c8494751af570a86bd2ca2406372795"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=c689666ba035599d0497a992f28628be
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=c689666ba035599d0497a992f28628be
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Mon, 15 Jun 2020 11:33:25 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 218
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-366.66",
+        "longitude": "-500.2"
+    },
+    "accuracy": "100",
+    "name": "B da",
+    "phone_number": "(0123)-456-789",
+    "address": "Gbasti",
+    "types": "shoe rack,chappal",
+    "website": "www.google.com/",
+    "language": "987546321"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=c689666ba035599d0497a992f28628be
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=c689666ba035599d0497a992f28628be
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Mon, 15 Jun 2020 11:33:27 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 218
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-366.66",
+        "longitude": "-500.2"
+    },
+    "accuracy": "100",
+    "name": "B da",
+    "phone_number": "(0123)-456-789",
+    "address": "Gbasti",
+    "types": "shoe rack,chappal",
+    "website": "www.google.com/",
+    "language": "987546321"
+}
+Request method:	GET
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=c689666ba035599d0497a992f28628be
+Proxy:			<none>
+Request params:	<none>
+Query params:	key=qaclick123
+				place_id=c689666ba035599d0497a992f28628be
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Date: Mon, 15 Jun 2020 11:33:28 GMT
+Server: Apache/2.4.18 (Ubuntu)
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST
+Access-Control-Max-Age: 3600
+Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With
+Content-Length: 218
+Keep-Alive: timeout=5, max=100
+Connection: Keep-Alive
+Content-Type: application/json;charset=UTF-8
+
+{
+    "location": {
+        "latitude": "-366.66",
+        "longitude": "-500.2"
+    },
+    "accuracy": "100",
+    "name": "B da",
+    "phone_number": "(0123)-456-789",
+    "address": "Gbasti",
+    "types": "shoe rack,chappal",
+    "website": "www.google.com/",
+    "language": "987546321"
 }

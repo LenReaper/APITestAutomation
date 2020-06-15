@@ -3,20 +3,21 @@ package api;
 import java.util.ArrayList;
 import java.util.List;
 
-import pojoSerialization.Locations;
-import pojoSerialization.addPlaceObjects;
+import pojo.Locations;
+import pojo.addPlaceObjects;
+
 
 public class POJOPost {
 	
-	public addPlaceObjects postObject() {
+	public addPlaceObjects postObject(String nameGiven, String addressGiven, String languageGiven) {
 		
 		addPlaceObjects add = new addPlaceObjects();
 		add.setAccuracy(100);
-		add.setName("Third Nameless dudine");
+		add.setName(nameGiven);
 		add.setPhone_number("(0123)-456-789");
-		add.setAddress("Shaitan gali, Khatra mehal, Shamshan ke saamne");
+		add.setAddress(addressGiven);
 		add.setWebsite("www.google.com/");
-		add.setLanguage("Spanish");
+		add.setLanguage(languageGiven);
 		Locations loc = new Locations();
 		loc.setLat(-366.66);
 		loc.setLng(-500.20);
