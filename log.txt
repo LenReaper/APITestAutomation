@@ -1,9 +1,9 @@
 Request method:	GET
-Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=bd09aab98887143860ce2e73d1622348
+Request URI:	https://rahulshettyacademy.com/maps/api/place/get/json?key=qaclick123&place_id=83a1fc1c78d4d7b50e94ae98a63ac215
 Proxy:			<none>
 Request params:	<none>
 Query params:	key=qaclick123
-				place_id=bd09aab98887143860ce2e73d1622348
+				place_id=83a1fc1c78d4d7b50e94ae98a63ac215
 Form params:	<none>
 Path params:	<none>
 Headers:		Accept=*/*
@@ -12,7 +12,7 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:			<none>
 HTTP/1.1 200 OK
-Date: Sun, 14 Jun 2020 14:29:02 GMT
+Date: Mon, 15 Jun 2020 06:13:31 GMT
 Server: Apache/2.4.18 (Ubuntu)
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: POST
