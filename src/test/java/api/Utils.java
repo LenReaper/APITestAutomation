@@ -19,7 +19,7 @@ import io.restassured.specification.ResponseSpecification;
 public class Utils {
 	
 	public static RequestSpecification req;
-	
+	 
 	public RequestSpecification requestSpec() throws FileNotFoundException {
 		
 		ResourceBundle res = ResourceBundle.getBundle("OR");
