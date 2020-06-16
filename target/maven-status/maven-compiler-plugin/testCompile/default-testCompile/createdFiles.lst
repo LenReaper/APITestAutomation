@@ -1,7 +1,4 @@
 api\Utils.class
-pojoSerialization\addPlaceObjects.class
-pojoSerialization\Locations.class
 cucumber\Options\testRunner.class
 stepDefinitions\addPlaceCodeImplementation.class
-stepDefinitions\getPlaceCodeImplementation.class
 api\POJOPost.class
