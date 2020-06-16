@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features = "src/test/java/features"
    				,glue = {"stepDefinitions"}
    				,plugin = "json:target/jsonReports/cucumber-report.json"
-   				//,tags = "@GetPlace"
+   				//,tags = "@OAuth"
    				)
 public class testRunner {
 
